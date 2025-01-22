@@ -4,6 +4,7 @@ import Features from "@/components/Features";
 import GameModes from "@/components/GameModes";
 import RecentPurchases from "@/components/RecentPurchases";
 import OnlineStaff from "@/components/OnlineStaff";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -14,6 +15,7 @@ const Index = () => {
       <GameModes />
       <RecentPurchases />
       <OnlineStaff />
+      <Footer />
     </div>
   );
 };
