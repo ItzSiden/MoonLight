@@ -5,6 +5,9 @@ import GameModes from "@/components/GameModes";
 import RecentPurchases from "@/components/RecentPurchases";
 import OnlineStaff from "@/components/OnlineStaff";
 import Footer from "@/components/Footer";
+import ServerRules from "@/components/ServerRules";
+import UpcomingEvents from "@/components/UpcomingEvents";
+import PlayerStats from "@/components/PlayerStats";
 
 const Index = () => {
   return (
@@ -12,7 +15,10 @@ const Index = () => {
       <Navbar />
       <Hero />
       <Features />
+      <PlayerStats />
       <GameModes />
+      <ServerRules />
+      <UpcomingEvents />
       <RecentPurchases />
       <OnlineStaff />
       <Footer />
