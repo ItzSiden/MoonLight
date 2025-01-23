@@ -51,7 +51,7 @@ const Staff = () => {
           className="space-y-8"
         >
           <div className="text-center space-y-4">
-            <h1 className="text-4xl font-bold text-primary">Our Staff Team</h1>
+            <h1 className="text-4xl font-bold text-primary mt-20">Our Staff Team</h1>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Meet the dedicated team behind MoonLight. Our staff members work hard to ensure 
               you have the best possible experience on our server.
