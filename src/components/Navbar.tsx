@@ -20,16 +20,16 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold text-primary">MoonLight</span>
+              <span className="text-2xl font-bold text-primary truncate">MoonLight</span>
             </Link>
           </div>
           
-          <div className="hidden md:flex md:items-center md:space-x-4">
+          <div className="hidden md:flex md:items-center md:space-x-6">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 to={item.path}
-                className="px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary transition-colors duration-200"
+                className="whitespace-nowrap px-3 py-2 rounded-md text-sm font-medium text-foreground hover:text-primary transition-colors duration-200"
               >
                 {item.name}
               </Link>
@@ -49,7 +49,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background/80 backdrop-blur-md">

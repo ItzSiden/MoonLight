@@ -50,7 +50,7 @@ const Vote = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-background to-secondary/5">
+    <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
       
       <main className="flex-grow container mx-auto px-4 py-8">
@@ -62,7 +62,7 @@ const Vote = () => {
         >
           <div className="text-center space-y-4">
             <motion.h1 
-              className="text-4xl font-bold bg-gradient-to-r from-minecraft to-minecraft-dark bg-clip-text text-transparent"
+              className="text-4xl font-bold text-primary"
               initial={{ scale: 0.95 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.5 }}
@@ -82,24 +82,24 @@ const Vote = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <Card className="h-full relative overflow-hidden border-2 hover:border-minecraft/50 transition-colors">
+                <Card className="h-full relative overflow-hidden border-2 hover:border-primary/50 transition-colors bg-white">
                   {site.popular && (
-                    <div className="absolute top-0 right-0 bg-minecraft text-white px-3 py-1 text-sm rounded-bl-lg">
+                    <div className="absolute top-0 right-0 bg-primary text-white px-3 py-1 text-sm rounded-bl-lg">
                       Popular
                     </div>
                   )}
                   <CardHeader>
                     <div className="flex items-center gap-3">
-                      <div className="p-2 rounded-full bg-secondary">
-                        <site.icon className="h-6 w-6 text-minecraft" />
+                      <div className="p-2 rounded-full bg-primary/10">
+                        <site.icon className="h-6 w-6 text-primary" />
                       </div>
                       <CardTitle>{site.name}</CardTitle>
                     </div>
                     <CardDescription>{site.description}</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <div className="bg-secondary/50 rounded-lg p-4">
-                      <h4 className="font-medium mb-2 text-minecraft">Rewards:</h4>
+                    <div className="bg-primary/5 rounded-lg p-4">
+                      <h4 className="font-medium mb-2 text-primary">Rewards:</h4>
                       <ul className="list-disc list-inside text-sm text-muted-foreground">
                         {site.rewards.map((reward) => (
                           <li key={reward} className="mb-1">{reward}</li>
@@ -107,7 +107,7 @@ const Vote = () => {
                       </ul>
                     </div>
                     <Button 
-                      className="w-full bg-minecraft hover:bg-minecraft-dark transition-colors"
+                      className="w-full bg-primary hover:bg-primary/90 transition-colors"
                       onClick={() => handleVote(site.name, site.url)}
                     >
                       Vote Now
@@ -118,8 +118,8 @@ const Vote = () => {
             ))}
           </div>
 
-          <div className="text-center bg-secondary/10 rounded-lg p-6 mt-8 border-2 border-minecraft/20">
-            <h2 className="text-2xl font-bold mb-2 text-minecraft">Monthly Top Voters</h2>
+          <div className="text-center bg-primary/5 rounded-lg p-6 mt-8 border-2 border-primary/20">
+            <h2 className="text-2xl font-bold mb-2 text-primary">Monthly Top Voters</h2>
             <p className="text-muted-foreground">
               Top 3 voters each month receive special rewards including exclusive tags, 
               custom pets, and bonus voting rewards for the following month!
