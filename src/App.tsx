@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import Index from "./pages/Index";
 import Store from "./pages/Store";
+import Vote from "./pages/Vote";
 
 const App = () => {
   const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => {
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/store" element={<Store />} />
+                <Route path="/vote" element={<Vote />} />
               </Routes>
             </AnimatePresence>
           </BrowserRouter>
