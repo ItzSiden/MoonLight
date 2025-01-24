@@ -73,13 +73,20 @@ const Store = () => {
         exit={{ opacity: 0, y: -20 }}
         className="container mx-auto px-4 py-24"
       >
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Server Store</h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Support our server and enhance your gameplay experience with exclusive ranks,
-            items, and features. All purchases help us maintain and improve the server!
-          </p>
-        </div>
+          <div className="text-center space-y-4 mt-20">
+            <motion.h1 
+              className="text-4xl font-bold text-primary"
+              initial={{ scale: 0.95 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              Server Store
+            </motion.h1>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+            Support our server and enhance your gameplay experience with exclusive ranks, items, and features.
+            All purchases help us maintain and improve the server!
+            </p>
+          </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {storeItems.map((item) => (

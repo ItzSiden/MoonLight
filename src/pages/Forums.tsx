@@ -96,8 +96,15 @@ const Forums = () => {
           transition={{ duration: 0.5 }}
           className="space-y-8"
         >
-          <div className="text-center space-y-4">
-            <h1 className="text-4xl font-bold mt-20">Application Forums</h1>
+          <div className="text-center space-y-4 mt-20">
+            <motion.h1 
+              className="text-4xl font-bold text-primary"
+              initial={{ scale: 0.95 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              Application Forums
+            </motion.h1>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Choose an application type below to get started. Make sure to fill out all required information.
             </p>
