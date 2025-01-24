@@ -3,12 +3,12 @@ import ServerStatus from "./ServerStatus";
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-teal-50 pt-16">
+    <div className="relative min-h-screen flex items-center justify-center">
       <div 
-        className="absolute inset-0 bg-[url('/placeholder.svg')] bg-cover bg-center opacity-10"
+        className="absolute inset-0 bg-[url('/lovable-uploads/f511bc2f-5fe1-4dd4-a416-11c29e592197.png')] bg-cover bg-center"
         style={{ backgroundBlendMode: 'overlay' }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-teal-50/80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent" />
       <div className="container mx-auto px-4 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -20,15 +20,15 @@ const Hero = () => {
             initial={{ scale: 0.9 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-5xl md:text-7xl font-bold text-gray-900"
+            className="text-5xl md:text-7xl font-bold text-white"
           >
-            Moon<span className="text-primary">Light</span>
+            Moon<span className="text-teal-400">Light</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-gray-600 max-w-2xl mx-auto"
+            className="text-xl text-gray-200 max-w-2xl mx-auto"
           >
             Join the ultimate Minecraft experience in Bangladesh
           </motion.p>
@@ -38,10 +38,10 @@ const Hero = () => {
             transition={{ delay: 0.4 }}
             className="flex justify-center space-x-4"
           >
-            <button className="px-8 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors duration-200">
+            <button className="px-8 py-3 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition-colors duration-200">
               Play Now
             </button>
-            <button className="px-8 py-3 border border-primary text-primary rounded-lg hover:bg-primary/10 transition-colors duration-200">
+            <button className="px-8 py-3 border border-white text-white rounded-lg hover:bg-white/10 transition-colors duration-200">
               Learn More
             </button>
           </motion.div>
