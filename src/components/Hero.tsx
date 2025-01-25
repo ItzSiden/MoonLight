@@ -5,10 +5,13 @@ const Hero = () => {
   return (
     <div className="relative min-h-screen flex items-center justify-center">
       <div 
-        className="absolute inset-0 bg-[url('/lovable-uploads/f511bc2f-5fe1-4dd4-a416-11c29e592197.png')] bg-cover bg-center"
-        style={{ backgroundBlendMode: 'overlay' }}
+        className="absolute inset-0 bg-[url('/lovable-uploads/f511bc2f-5fe1-4dd4-a416-11c29e592197.png')] bg-cover bg-center bg-no-repeat"
+        style={{ 
+          imageRendering: 'crisp-edges',
+          backgroundSize: '100% 100%'
+        }}
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent" />
+      <div className="absolute inset-0 bg-black/20" /> {/* Reduced overlay opacity for better image visibility */}
       <div className="container mx-auto px-4 text-center relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
