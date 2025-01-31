@@ -5,11 +5,7 @@ import GameModes from "@/components/GameModes";
 import RecentPurchases from "@/components/RecentPurchases";
 import OnlineStaff from "@/components/OnlineStaff";
 import Footer from "@/components/Footer";
-import ServerRules from "@/components/ServerRules";
-import UpcomingEvents from "@/components/UpcomingEvents";
 import PlayerStats from "@/components/PlayerStats";
-import Announcements from "@/components/Announcements";
-import Achievements from "@/components/Achievements";
 
 const Index = () => {
   return (
@@ -18,11 +14,7 @@ const Index = () => {
       <Hero />
       <Features />
       <PlayerStats />
-      <Announcements />
       <GameModes />
-      <Achievements />
-      <ServerRules />
-      <UpcomingEvents />
       <RecentPurchases />
       <OnlineStaff />
       <Footer />

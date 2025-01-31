@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import Store from "./pages/Store";
 import Vote from "./pages/Vote";
 import Staff from "./pages/Staff";
+import Rules from "./pages/Rules";
 import Forums from "./pages/Forums";
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
                 <Route path="/store" element={<Store />} />
                 <Route path="/vote" element={<Vote />} />
                 <Route path="/staff" element={<Staff />} />
+                <Route path="/rules" element={<Rules />} />
                 <Route path="/forums" element={<Forums />} />
               </Routes>
             </AnimatePresence>
