@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import ServerStatus from "./ServerStatus";
-import { Discord } from "lucide-react";
+import { MessageSquare } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -32,7 +32,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="flex items-center space-x-2 hover:text-primary transition-colors"
             >
-              <Discord className="w-5 h-5" />
+              <MessageSquare className="w-5 h-5" />
               <span>DISCORD.GG/MOONLIGHT</span>
             </a>
           </motion.div>
