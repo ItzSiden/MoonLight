@@ -15,6 +15,14 @@ const Hero = () => {
       
       {/* Main Content */}
       <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-between h-full">
+        {/* Moon Loader */}
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 2, ease: "easeOut" }}
+          className="w-20 h-20 bg-yellow-100 rounded-full mb-8 shadow-[0_0_50px_#fff] animate-float"
+        />
+
         {/* Logo Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -24,7 +32,7 @@ const Hero = () => {
           <h1 className="text-8xl md:text-9xl font-bold text-white mb-4 tracking-wider" style={{
             textShadow: '0 0 20px #3b82f6, 0 0 40px #3b82f6'
           }}>
-            AQUA<span className="text-blue-400">LAND</span>
+            MOON<span className="text-blue-400">LIGHT</span>
           </h1>
         </motion.div>
 
@@ -39,7 +47,7 @@ const Hero = () => {
             <div className="flex items-center space-x-4 bg-blue-600/20 backdrop-blur-sm px-6 py-3 rounded-lg">
               <Users className="w-6 h-6 text-blue-400" />
               <div className="flex flex-col">
-                <span className="text-blue-400 font-medium">PLAY.AQUALAND.TOP</span>
+                <span className="text-blue-400 font-medium">PLAY.MOONLIGHT.TOP</span>
                 <span className="text-sm text-gray-300">20 PLAYERS ONLINE</span>
               </div>
             </div>
@@ -48,7 +56,7 @@ const Hero = () => {
             <div className="flex items-center space-x-4 bg-blue-600/20 backdrop-blur-sm px-6 py-3 rounded-lg">
               <MessageSquare className="w-6 h-6 text-blue-400" />
               <div className="flex flex-col">
-                <span className="text-blue-400 font-medium">DISCORD.GG/AQUALAND</span>
+                <span className="text-blue-400 font-medium">DISCORD.GG/MOONLIGHT</span>
                 <span className="text-sm text-gray-300">110 USERS ONLINE</span>
               </div>
             </div>
