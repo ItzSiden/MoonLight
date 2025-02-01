@@ -15,14 +15,6 @@ const Hero = () => {
       
       {/* Main Content */}
       <div className="container mx-auto px-4 relative z-10 flex flex-col items-center justify-between h-full">
-        {/* Moon Loader */}
-        <motion.div
-          initial={{ y: 100, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 2, ease: "easeOut" }}
-          className="w-20 h-20 bg-yellow-100 rounded-full mb-8 shadow-[0_0_50px_#fff] animate-float"
-        />
-
         {/* Logo Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
