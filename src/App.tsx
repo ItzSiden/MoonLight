@@ -28,13 +28,17 @@ const App = () => {
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/store" element={
+                  <ProtectedRoute>
                     <Store />
+                  </ProtectedRoute>
                 } />
                 <Route path="/vote" element={<Vote />} />
                 <Route path="/staff" element={<Staff />} />
                 <Route path="/rules" element={<Rules />} />
                 <Route path="/forums" element={
+                  <ProtectedRoute>
                     <Forums />
+                  </ProtectedRoute>
                 } />
               </Routes>
             </AnimatePresence>
