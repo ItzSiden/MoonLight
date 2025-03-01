@@ -1,7 +1,9 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
+import Auth from "./Auth";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,11 +36,15 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-            <ThemeToggle />
+            <div className="flex items-center gap-2">
+              <ThemeToggle />
+              <Auth />
+            </div>
           </div>
           
           <div className="md:hidden flex items-center space-x-2">
             <ThemeToggle />
+            <Auth />
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-primary focus:outline-none"

@@ -12,6 +12,7 @@ import Vote from "./pages/Vote";
 import Staff from "./pages/Staff";
 import Rules from "./pages/Rules";
 import Forums from "./pages/Forums";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 const App = () => {
   const queryClient = new QueryClient();
@@ -26,11 +27,19 @@ const App = () => {
             <AnimatePresence mode="wait">
               <Routes>
                 <Route path="/" element={<Index />} />
-                <Route path="/store" element={<Store />} />
+                <Route path="/store" element={
+                  <ProtectedRoute>
+                    <Store />
+                  </ProtectedRoute>
+                } />
                 <Route path="/vote" element={<Vote />} />
                 <Route path="/staff" element={<Staff />} />
                 <Route path="/rules" element={<Rules />} />
-                <Route path="/forums" element={<Forums />} />
+                <Route path="/forums" element={
+                  <ProtectedRoute>
+                    <Forums />
+                  </ProtectedRoute>
+                } />
               </Routes>
             </AnimatePresence>
           </BrowserRouter>
