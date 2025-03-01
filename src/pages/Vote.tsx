@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -50,7 +51,7 @@ const Vote = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col bg-background">
       <Navbar />
       
       <main className="flex-grow container mx-auto px-4 py-8">
@@ -82,7 +83,7 @@ const Vote = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <Card className="h-full relative overflow-hidden border-2 hover:border-primary/50 transition-colors bg-white">
+                <Card className="h-full relative overflow-hidden border-2 hover:border-primary/50 transition-colors">
                   {site.popular && (
                     <div className="absolute top-0 right-0 bg-primary text-white px-3 py-1 text-sm rounded-bl-lg">
                       Popular

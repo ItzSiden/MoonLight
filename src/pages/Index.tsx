@@ -1,3 +1,4 @@
+
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Features from "@/components/Features";
@@ -9,7 +10,7 @@ import PlayerStats from "@/components/PlayerStats";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Navbar />
       <Hero />
       <Features />
