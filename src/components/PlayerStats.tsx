@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Users, Clock, Trophy, Star } from "lucide-react";
@@ -31,12 +32,12 @@ const PlayerStats = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-secondary/5">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-3xl font-bold text-center mb-12"
+          className="text-3xl font-bold text-center mb-12 text-primary"
         >
           Server Statistics
         </motion.h2>
@@ -48,15 +49,17 @@ const PlayerStats = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="text-center hover:shadow-lg transition-shadow duration-300">
+              <Card className="text-center hover:shadow-lg transition-shadow duration-300 bg-secondary/10 border-border/30">
                 <CardHeader>
                   <div className="flex justify-center">
                     <span className={stat.color}>{stat.icon}</span>
                   </div>
-                  <CardTitle className="text-3xl font-bold">{stat.value}</CardTitle>
+                  <CardTitle className="text-3xl font-bold bg-gradient-to-br from-white via-white/90 to-white/70 bg-clip-text text-transparent">
+                    {stat.value}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">{stat.label}</p>
+                  <p className="text-muted-foreground font-medium">{stat.label}</p>
                 </CardContent>
               </Card>
             </motion.div>

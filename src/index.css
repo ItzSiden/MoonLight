@@ -14,7 +14,7 @@
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 210 40% 98%;
+    --primary: 175 78% 40%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -53,7 +53,7 @@
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 14B8A6;
+    --primary: 175 78% 40%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -100,4 +100,32 @@
 
 .dark .text-gradient {
   @apply bg-gradient-to-br from-white via-white/90 to-white/70 bg-clip-text text-transparent;
+}
+
+/* Add neon glow effects */
+.neon-glow {
+  text-shadow: 0 0 5px rgba(20, 184, 166, 0.7), 0 0 10px rgba(20, 184, 166, 0.5);
+}
+
+.neon-box {
+  box-shadow: 0 0 5px rgba(20, 184, 166, 0.3), 0 0 15px rgba(20, 184, 166, 0.2);
+}
+
+/* Animated background gradients */
+.gradient-bg {
+  background: linear-gradient(45deg, #1c1c1c, #2d3748, #1a1c25);
+  background-size: 200% 200%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
