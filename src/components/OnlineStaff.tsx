@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
@@ -9,12 +10,12 @@ const OnlineStaff = () => {
   ];
 
   return (
-    <section className="py-16 bg-teal-50">
+    <section className="py-16 bg-background/80">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-3xl font-bold text-center mb-12"
+          className="text-3xl font-bold text-center mb-12 text-primary"
         >
           Online Staff
         </motion.h2>
@@ -26,15 +27,15 @@ const OnlineStaff = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card>
+              <Card className="bg-secondary/20 border-border">
                 <CardHeader>
-                  <CardTitle className="text-center">{member.name}</CardTitle>
+                  <CardTitle className="text-center text-foreground">{member.name}</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center">
                   <p className="text-primary font-semibold">{member.role}</p>
                   <div className="flex items-center justify-center mt-2">
                     <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                    <span className="text-sm text-gray-600">Online</span>
+                    <span className="text-sm text-muted-foreground">Online</span>
                   </div>
                 </CardContent>
               </Card>

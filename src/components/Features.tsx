@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Shield, Sword, Users, Trophy } from "lucide-react";
 
@@ -26,12 +27,12 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-background">
       <div className="container mx-auto px-4">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-3xl font-bold text-center mb-12"
+          className="text-3xl font-bold text-center mb-12 text-primary"
         >
           Server Features
         </motion.h2>
@@ -42,11 +43,11 @@ const Features = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className="p-6 rounded-lg border border-teal-100 hover:border-primary transition-colors duration-300"
+              className="p-6 rounded-lg border border-border hover:border-primary transition-colors duration-300 bg-secondary/20"
             >
               <div className="text-primary mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">{feature.title}</h3>
+              <p className="text-muted-foreground">{feature.description}</p>
             </motion.div>
           ))}
         </div>

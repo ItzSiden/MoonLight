@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 
@@ -21,12 +22,12 @@ const GameModes = () => {
   ];
 
   return (
-    <section className="py-16 bg-teal-50">
+    <section className="py-16 bg-background/60">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-3xl font-bold text-center mb-12"
+          className="text-3xl font-bold text-center mb-12 text-primary"
         >
           Game Modes
         </motion.h2>
@@ -38,10 +39,10 @@ const GameModes = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ delay: index * 0.1 }}
             >
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300 border-border bg-secondary/20">
                 <CardHeader>
-                  <CardTitle>{mode.title}</CardTitle>
-                  <CardDescription>{mode.description}</CardDescription>
+                  <CardTitle className="text-foreground">{mode.title}</CardTitle>
+                  <CardDescription className="text-muted-foreground">{mode.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <img
